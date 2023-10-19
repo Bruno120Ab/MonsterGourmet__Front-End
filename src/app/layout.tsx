@@ -1,12 +1,9 @@
 import StyledConfig from '@/styles/_styled.config'
 import GlobalStyle from '@/styles/_globalStyled'
 
-import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 
-import { Inter } from 'next/font/google'
 import Head from './head'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
@@ -22,6 +19,7 @@ export default function RootLayout({
         <body style={{position: 'relative'}}>
           <GlobalStyle />
           <StyledConfig>{children}</StyledConfig>
+          <Analytics />
         </body>
       </html>
   )

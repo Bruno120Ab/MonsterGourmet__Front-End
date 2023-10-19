@@ -1,8 +1,7 @@
-
 import GlobalStyle from '@/styles/_globalStyled'
 import StyledConfig from '@/styles/_styled.config'
-import type { Metadata } from 'next'
 
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Carrinho',
