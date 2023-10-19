@@ -2,8 +2,6 @@ import { create } from "zustand";
 
 import { persist } from 'zustand/middleware'
 
-
-// import { Product } from "@/providers/Types/interface";
 import { IMdl_StateAction, IMnu_StateAction } from "./types";
 import { IDefaultProduct } from "@/types";
 
@@ -74,12 +72,6 @@ const Cart = create(persist(
       set(() => ({ cart: [...newCart] }))
     },
     addValueDelivery: () => {            
-        // const sttsModal = Modal(state => state.alteredSttsModal)
-      
-        // sttsModal(false)
-      const otherStore = Modal.getState()
-      otherStore.alteredSttsModal(false)
-     
       const neighborhood = get().address.bairro
 
       const findIndex = neighborhood.indexOf('-')
@@ -88,6 +80,9 @@ const Cart = create(persist(
 
       set(() => ({ valueDelivery: value }))
 
+      const otherStore = Modal.getState()
+
+      otherStore.alteredSttsModal(false)
     },
     moreItem: (item: any) => {
       const updatedCart = get().cart.map((cartItem: any) => {
@@ -104,8 +99,6 @@ const Cart = create(persist(
 
       const subTotal = get().cart.reduce((acc: any, num:any) => acc + num.value,0)
       const vleTotal = get().valueDelivery + get().valueSub 
-
-      console.log(vleTotal)
     
       set(() => ({ cart: updatedCart }))
       set(() => ({ valueSub: subTotal }))
@@ -224,7 +217,6 @@ const Cart = create(persist(
 
       order += '\n'
 
-      console.log(order)
       let encode = encodeURI(order);
 
       let URL = `https://wa.me/${71996944473}?text=${encode}`;
@@ -240,6 +232,7 @@ const Cart = create(persist(
       };
 
       openExternalLink(URL)
+
 
       set({ cart: [] })
       set({ address: { } })
