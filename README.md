@@ -1,3 +1,4 @@
+
 # Solução de Atendimento ao Cliente para Monster Gourmet Express
 
 Este é um MVP (Produto Mínimo Viável) desenvolvido para oferecer uma solução de atendimento ao cliente para Monster Gourmet Express. O MVP contempla diversos recursos, incluindo perfil da loja, menu personalizado, pedidos realizados no site com entrega no WhatsApp Business, opções de entrega e retirada, controle de horário de funcionamento, entre outros.
@@ -29,8 +30,5 @@ Certifique-se de ter o Node.js e o npm instalados em seu sistema.
 Para executar o projeto localmente, utilize o seguinte comando:
 <code> yarn dev </code>
 
-### Observações
-A plataforma atualmente em desenvolvimento será expandida para incluir uma versão destinada especificamente para desktop. Embora a versão atual seja responsiva, ela ainda está em fase de otimização para garantir uma experiência consistente em uma variedade de dispositivos. Além disso, o progresso da implementação da versão para desktop está em andamento, com a utilização do software de design de interface do usuário Figma para a concepção e prototipagem das funcionalidades e layout necessários.
 
 <h2>Agradeço a Monster Gourmet por fornecer a oportunidade de desenvolver este MVP.</h2>
-
