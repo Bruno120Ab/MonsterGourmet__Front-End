@@ -3,20 +3,20 @@ import * as S from "./styled"
 
 import * as useStore from '@/hooks/useStore'
 
+import Link from 'next/link'
+
 import Profile from "../../../public/LogoOficcial.png"
 
 import { IconCart, LogoImage } from "../Icons"
-
-import Link from 'next/link'
 
 
 export function Header() {    
      
     const getItensCart = useStore.Cart(state => state.cart)
 
-    const itensCart = getItensCart.length
+    const itensCart: number = getItensCart.length
 
-    const openingHour: number = 9; 
+    const openingHour: number = 17; 
     const closingHour: number = 23; 
 
     function isStoreOpen(): boolean {

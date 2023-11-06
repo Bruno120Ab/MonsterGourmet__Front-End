@@ -1,9 +1,7 @@
+import Head from './head'
+
 import StyledConfig from '@/styles/_styled.config'
 import GlobalStyle from '@/styles/_globalStyled'
-
-import { Analytics } from '@vercel/analytics/react';
-
-import Head from './head'
 
 export default function RootLayout({
   children,
@@ -19,7 +17,6 @@ export default function RootLayout({
         <body style={{position: 'relative'}}>
           <GlobalStyle />
           <StyledConfig>{children}</StyledConfig>
-          <Analytics />
         </body>
       </html>
   )

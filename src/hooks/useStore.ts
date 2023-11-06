@@ -233,7 +233,6 @@ const Cart = create(persist(
 
       openExternalLink(URL)
 
-
       set({ cart: [] })
       set({ address: { } })
       set({ observation: ''})
